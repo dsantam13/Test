@@ -1,8 +1,54 @@
+/* Especificidad - 0 0 0 1 */
 p {
-    color: blue;
-    background-color: orange;
+    color: green;
 }
 
-p {
+/* Especificidad - 0 0 0 2 */
+article > p {
+    color: orange;
+}
+
+/* Especificidad - 0 0 1 0 */
+.post-title {
+    color: green;
+}
+
+/* Especificidad - 0 0 1 1 */
+.post > h1 {
+    color: red;
+}
+
+/* Especificidad - 0 0 2 0 */
+.post > .post-title {
+    color: orange;
+}
+
+/* Especificidad - 0 0 0 1 */
+a {
+    color: green;
+} 
+
+/* Especificidad - 0 0 1 0 */
+.post-link {
+    color: orange;
+} 
+
+/* Especificidad - 0 0 1 1 */
+a.post-link {
+    color: blue;
+}
+
+/* Especificidad - 0 0 2 0 */
+.post > .post-link {
+    color: red;
+}
+
+/* Especificidad - 0 0 2 1 */
+.post > a.post-link {
+    color: brown;
+}
+
+/* Especificidad - 0 1 0 0 */
+#title {
     color: teal;
 }
